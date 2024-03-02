@@ -18,7 +18,7 @@ Future<Response> onRequest(RequestContext context) async {
   List<String> validTokens = ['token1', 'token2', 'token3'];
 
   List<String> parts = header.split(' ');
-  var token = parts[1];
+  var token = parts[0];
 
   if(validTokens.contains(token)) {
     return Response.json(
